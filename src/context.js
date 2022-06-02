@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useContext } from "react";
 import { links, social } from "./data";
 
 const AppContext = createContext();
@@ -16,5 +16,10 @@ export const AppContextProvider = ({ children }) => {
     </AppContext.Provider>
   )
 };
+
+// custom hook
+export const useGlobalContext = () => {
+  return useContext(AppContext);
+}
 
 export default AppContext;

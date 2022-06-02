@@ -1,9 +1,8 @@
 import { GiHamburgerMenu } from "react-icons/gi";
-import { useContext } from "react";
-import AppContext from "./context";
+import { useGlobalContext } from "./context";
 
 function Home() {
-  const { showSidebar, setShowSidebar, showMenu, setShowMenu, setShowModal } = useContext(AppContext);
+  const { showSidebar, setShowSidebar, showMenu, setShowMenu, setShowModal } = useGlobalContext();
 
   const handleClick = () => {
     setShowSidebar(!showSidebar);

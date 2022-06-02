@@ -1,16 +1,12 @@
-import AppContext from "./context";
-import { useContext } from "react";
+import { useGlobalContext } from "./context";
 import { FaTimes } from "react-icons/fa";
 
 function Sidebar() {
-  const { links, social, showMenu, setShowMenu, showSidebar, setShowSidebar } = useContext(AppContext);
+  const { links, social, showMenu, setShowMenu, showSidebar, setShowSidebar } = useGlobalContext();
 
   const handleClick = () => {
     setShowMenu(!showMenu);
-
-    setTimeout(() => {
-      setShowSidebar(!showSidebar);
-    }, 300)
+    setShowSidebar(!showSidebar);
   }
 
   return (

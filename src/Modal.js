@@ -1,9 +1,8 @@
-import { useContext } from "react";
-import AppContext from "./context";
+import { useGlobalContext } from "./context";
 import { FaTimes } from "react-icons/fa";
 
 function Modal() {
-  const { showModal, setShowModal } = useContext(AppContext);
+  const { showModal, setShowModal } = useGlobalContext();
 
   return (
     <div className={showModal ? "modal" : "modal hidden-modal"}>
